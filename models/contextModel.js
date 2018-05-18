@@ -4,14 +4,15 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var rcmConfigSchema = new Schema({
+var ContextModelSchema = new Schema({
     clientId:String,
-    modelId:String,
     timestamp:{ type : Date, default: Date.now },
-    model_dimensions:[],
+    data_description:[],
     name:String,
-    elements:[]
+    db_name:String,
+    db_user:String,
+    db_password:String
 
 });
 
-module.exports = mongoose.model('RCMConfig', rcmConfigSchema);
+module.exports = mongoose.model('ContextModel', ContextModelSchema);

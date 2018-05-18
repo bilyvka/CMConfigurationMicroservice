@@ -20,7 +20,7 @@ var allowCrossDomain = function(req, res, next) {
 
 
   next();
-}
+};
 
 
 // view engine setup
